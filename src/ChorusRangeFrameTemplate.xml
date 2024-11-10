@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusRangeFrameTemplate.lua"/>
+	<Frame name="ChorusRangeSpellMapFrame">
+		<Scripts>
+			<OnLoad>Chorus.rangeSpellMapFrameMain(self);</OnLoad>
+		</Scripts>
+	</Frame>
+	<Frame name="ChorusRangeFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="48" y="16" />
+		</Size>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText" inherits="ChorusFont12Mono" justifyV="MIDDLE" justifyH="RIGHT" setAllPoints="true"/>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				Chorus.rangeFrameMain(self);
+			</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+	</Frame>
+</Ui>

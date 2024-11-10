@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Frame name="ChorusLargeUnitFrameTemplate" inherits="ChorusUnitFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="160" y="100"/>
+		</Size>
+		<Frames>
+			<!-- Header background. -->
+			<Frame name="$parentBackground" inherits="ChorusUnitBackgroundTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="3" y="0"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+						<Offset x="-3" y="-16"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<!-- Backdrop. -->
+			<Frame name="$parentBackdrop" inherits="ChorusUnitBackdropTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="4" y="-12"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+						<Offset x="-4" y="-60"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<!-- Clickable area. -->
+			<Button name="$parentSecureUnitButton" inherits="ChorusUnitButtonTemplate" setAllPoints="true">
+				<Size>
+					<AbsDimension x="160" y="60"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<!-- Header -->
+			<Frame name="$parentUnitLevelFrame" inherits="ChorusUnitLevelFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentUnitNameFrame" inherits="ChorusUnitNameFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="24" y="0"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentUnitAffectingCombatFrame" inherits="ChorusUnitAffectingCombatFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPRIGHT">
+						<Offset x="-16" y="-16"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentRaidTargetIconFrame" inherits="ChorusRaidTargetIconFrameTemplate">
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset x="0" y="4"/>
+					</Anchor>
+					<Anchor point="CENTER">
+						<Offset x="0" y="4"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentUnitGroupRoleFrame" inherits="ChorusUnitGroupRoleFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="-16" y="0"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPRIGHT">
+						<Offset x="-32" y="-16"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<!-- Main -->
+			<StatusBar name="$parentHealthFrame" inherits="ChorusHugeHealthFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="0" y="-16"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+						<Offset x="0" y="-40"/>
+					</Anchor>
+				</Anchors>
+			</StatusBar>
+			<StatusBar name="$parentPowerFrame" inherits="ChorusHugePowerFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="0" y="-40"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+						<Offset x="0" y="-56"/>
+					</Anchor>
+				</Anchors>
+			</StatusBar>
+			<Frame name="$parentThreatFrame" inherits="ChorusThreatFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="0" y="-56"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+						<Offset x="0" y="-72"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentRangeFrame" inherits="ChorusRangeFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="0" y="-56"/>
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
+						<Offset x="0" y="-72"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<!-- Footer -->
+			<Frame name="$parentBuffFrame" inherits="ChorusTinyAuraFrameTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset x="-10" y="0"/>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="filter" type="string" value="HELPFUL"/>
+				</Attributes>
+			</Frame>
+			<Frame name="$parentDebuffFrame" inherits="ChorusSmallAuraFrameTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="filter" type="string" value="HARMFUL"/>
+				</Attributes>
+			</Frame>
+			<Frame name="$parentAuraTooltipFrame" inherits="ChorusAuraTooltipFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Button name="$parentAuraTooltipToggleButton" inherits="ChorusAuraTooltipFrameToggleButtonTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Frames>
+	</Frame>
+</Ui>

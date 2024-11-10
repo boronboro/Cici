@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Frame name="ChorusSmallUnitFrameTemplate" inherits="ChorusUnitFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="96" y="32"/>
+		</Size>
+		<Frames>
+			<!-- Backdrop. -->
+			<Frame name="$parentBackdrop" inherits="ChorusUnitBackdropTemplate"/>
+			<!-- Clickable area. -->
+			<Button name="$parentSecureUnitButton" inherits="ChorusUnitButtonTemplate" setAllPoints="true"/>
+			<!-- Header -->
+			<Frame name="$parentUnitNameFrame" inherits="ChorusUnitNameFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentUnitAffectingCombatFrame" inherits="ChorusUnitAffectingCombatFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPRIGHT">
+						<Offset x="-16" y="-16"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentRaidTargetIconFrame" inherits="ChorusRaidTargetIconFrameTemplate">
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset x="0" y="4"/>
+					</Anchor>
+					<Anchor point="CENTER">
+						<Offset x="0" y="4"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentUnitGroupRoleFrame" inherits="ChorusUnitGroupRoleFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="-16" y="0"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPRIGHT">
+						<Offset x="-32" y="-16"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<!-- Main -->
+			<StatusBar name="$parentHealthFrame" inherits="ChorusSmallHealthFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="0" y="6"/>
+					</Anchor>
+				</Anchors>
+			</StatusBar>
+			<StatusBar name="$parentPowerFrame" inherits="ChorusTinyPowerFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="BOTTOMRIGHT">
+						<Offset x="0" y="6"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+			</StatusBar>
+			<Frame name="$parentDebuffFrame" inherits="ChorusTinyAuraFrameTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="filter" type="string" value="HARMFUL RAID"/>
+				</Attributes>
+			</Frame>
+		</Frames>
+	</Frame>
+</Ui>

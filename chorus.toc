@@ -1,0 +1,6 @@
+##Interface: 30300
+##Notes: Add group frames and replace native solo frames. This is a work in progress.
+##Title: Chorus
+##Version: 0.10.0
+##SavedVariables: ChorusUnitGroupRoleMap, ChorusLuacheckrcDump
+src\Chorus.xml

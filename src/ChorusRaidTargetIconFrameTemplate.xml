@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusRaidTargetIconFrameTemplate.lua"/>
+	<Frame name="ChorusRaidTargetIconFrameTemplate" virtual="true" frameStrata="MEDIUM">
+		<Size>
+			<AbsDimension x="16" y="16" />
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentArtwork" file="Interface\TargetingFrame\UI-RaidTargetingIcons" setAllPoints="true"/>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>Chorus.raidTargetIconFrameMain(self);</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+	</Frame>
+</Ui>

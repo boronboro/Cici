@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusThreatFrameTemplate.lua"/>
+	<Frame name="ChorusThreatFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="48" y="16" />
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentArtwork" file="Interface\RaidFrame\UI-RaidFrame-Threat">
+					<Size>
+						<AbsDimension x="16" y="16" />
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT">
+							<Offset x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText" inherits="ChorusFont12Mono" setAllPoints="true" justifyH="LEFT" justifyV="MIDDLE">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="16" y="0"/>
+						</Anchor>
+						<Anchor point="BOTTOMLEFT">
+							<Offset x="16" y="0"/>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>Chorus.threatFrameMain(self);</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+	</Frame>
+</Ui>

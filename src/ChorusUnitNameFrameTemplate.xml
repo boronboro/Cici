@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusUnitNameFrameTemplate.lua"/>
+	<Frame name="ChorusUnitNameFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="144" y="16" />
+		</Size>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText" inherits="ChorusFont12Sans" setAllPoints="true" justifyH="LEFT"/>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>Chorus.unitNameFrameMain(self);</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+	</Frame>
+</Ui>

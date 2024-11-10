@@ -1,0 +1,119 @@
+= Chorus
+Vladyslav Bondarenko <vladyslavbond@protonmail.com>
+0.10.0 (testing), 2024-01-28
+
+Chorus is a graphical user interface extension for a popular video game World
+of Warcraft. It adds a custom raid frame. This is a work in progress.
+
+Features:
+
+  * approximate distance to every raid member in yards;
+  * sort debuffs by relevance;
+  * generalize raid and party frames;
+
+Supported game version is legacy 3.3.5a (or interface 30300).
+
+The motivation is to create a robust minimalistic raid frame. It must work
+out-of-the-box and require no configuration by the user. It must be comparable
+in it's features with modern native raid frame that was shipped with the game
+since Cataclysm expansion (interface 40000).
+
+This add-on will never feature key binding customization. This feature is
+specifically excluded to be the subject of a different add-on.
+
+== Install
+
+The project is installed like any other World of Warcraft add-on. Exit the
+game. Unpack the archive that contains the project's sources into
+`${DESTDIR}/Interface/AddOns/` directory, where `${DESTDIR}` is the path to the
+game installation directory. In the end it must look something like this.
+
+----
+${DESTDIR}/Interface/AddOns/chorus/chorus.toc
+${DESTDIR}/Interface/AddOns/chorus/doc/
+${DESTDIR}/Interface/AddOns/chorus/etc/
+${DESTDIR}/Interface/AddOns/chorus/Makefile
+${DESTDIR}/Interface/AddOns/chorus/README.adoc
+${DESTDIR}/Interface/AddOns/chorus/share/
+${DESTDIR}/Interface/AddOns/chorus/src/
+${DESTDIR}/Interface/AddOns/chorus/target/
+${DESTDIR}/Interface/AddOns/chorus/test/
+----
+
+Experienced users may install the add-on with `git`.
+
+----
+git clone --branch master -o upstream https://rocketgit.com/user/vrtc/chorus "${DESTDIR}/Interface/AddOns/chorus/"
+----
+
+== Development
+
+=== Build dependencies
+
+The project does not require any building steps to work. It can be freely
+distributed as sources only. However, the project was developed using certain
+tools that may still be applicable.
+
+Build dependencies:
+
+  * `make` (build instrumentation);
+  * `git` (versioning, packaging, distribution);
+  * `luacheck` (static analysis for Lua);
+  * `xmllint` (XML validator);
+  * `ldoc` (generate technical documentation from Lua sources);
+
+==== Build dependencies for Debian 12
+
+Install build dependencies for Debian 12.
+
+----
+apt-get install libxml2-utils lua-check lua-ldoc make git
+----
+
+==== Build dependencies for Windows
+
+Insalling for Windows is much more tricky. The first step is to install
+LuaRocks, then use LuaRocks to install LuaCheck and LDoc. xmllint can be
+replaced with any XML parser that understands *.xsd.
+
+=== Build package
+
+Navigate to the source directory.
+
+The source directory is where the distribution archive was unpacked to, where
+the repository was cloned to, or where the add-on was already installed to.
+
+The build is done with `make` utility. All example commands assume it's
+installed.
+
+Minimal effort was made to make the `Makefile` adhere to `GNUmakefile`
+conventions.
+
+Validate Lua snippets for sanity. Requires `luacheck`. The configuration is
+loaded from `etc/luacheckrc.lua`.
+
+----
+make check-lua
+----
+
+Validate Blizzard UI XML snippets for sanity. Requires `xmllint`. The schema is
+loaded from `etc/FrameXML/UI.xsd`. The schema descriptor was exported from
+the game client, version 3.3.5a.
+
+----
+make check-xml
+----
+
+Do both.
+
+----
+make check
+----
+
+Package a `*.zip` archive for redistribution. Requires `git`. More importantly,
+it requires the project's source repository to be cloned. Therefore, it will
+not work if the project's was obtained from a distribution archive.
+
+----
+make dist
+----

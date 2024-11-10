@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusAuraTooltipFrameTemplate.lua"/>
+	<Frame name="ChorusAuraTooltipFrameAuraFrameTemplate" inherits="ChorusAuraFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="180" y="180"/>
+		</Size>
+		<!-- Allocate `ChorusAuraButtonTemplate` instances dynamically at runtime,
+		instead of declaring them in this descriptor with `Frames` tag.
+		See ChorusAuraFrameTemplate.lua. -->
+	</Frame>
+	<Frame name="ChorusAuraTooltipFrameTemplate" inherits="SecureFrameTemplate" frameStrata="TOOLTIP" hidden="true" virtual="true" protected="true">
+		<Size>
+			<AbsDimension x="192" y="384"/>
+		</Size>
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Frames>
+			<Frame name="$parentSecureHandlerClickFrame" inherits="SecureHandlerClickTemplate"/>
+			<Frame name="$parentSecureHandlerShowHideFrame" inherits="SecureHandlerShowHideTemplate"/>
+			<Frame name="$parentUnitNameFrame" inherits="ChorusUnitNameFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="0" y="-3"/>
+					</Anchor>
+					<Anchor point="TOPLEFT">
+						<Offset x="12" y="-3"/>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+						<Offset x="0" y="-24"/>
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
+						<Offset x="0" y="-24"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Button name="$parentCloseButton" inherits="UIPanelCloseButton,SecureActionButtonTemplate">
+				<Size>
+					<AbsDimension x="24" y="24"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="-6" y="-6"/>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Frame name="$parentBuffFrame" inherits="ChorusAuraTooltipFrameAuraFrameTemplate" protected="true">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="6" y="-24"/>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="filter" type="string" value="HELPFUL"/>
+				</Attributes>
+			</Frame>
+			<Frame name="$parentDebuffFrame" inherits="ChorusAuraTooltipFrameAuraFrameTemplate" protected="true">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentBuffFrame" relativePoint="BOTTOMLEFT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="filter" type="string" value="HARMFUL"/>
+				</Attributes>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnLoad>Chorus.auraTooltipFrameMain(self);</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+	</Frame>
+	<Button name="ChorusAuraTooltipFrameToggleButtonTemplate" virtual="true" enableMouse="true" inherits="SecureActionButtonTemplate">
+		<Size>
+			<AbsDimension x="16" y="16"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture setAllPoints="true">
+					<Color r="0" g="0" b="0" a="0.6"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>Chorus.auraTooltipToggleButtonMain(self);</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+		<NormalTexture file="Interface\MoneyFrame\Arrow-Right-Up"/>
+		<PushedTexture file="Interface\MoneyFrame\Arrow-Right-Down"/>
+		<DisabledTexture file="Interface\MoneyFrame\Arrow-Right-Disabled"/>
+	</Button>
+</Ui>

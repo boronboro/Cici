@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="Chorus.lua"/>
+	<Script file="ChorusTest.lua"/>
+	<Script file="local.lua"/>
+	<Include file="ChorusFont.xml"/>
+	<!-- Templates (abstract classes). -->
+	<Include file="ChorusAuraButtonTemplate.xml"/>
+	<Include file="ChorusAuraFrameTemplate.xml"/>
+	<Include file="ChorusAuraTooltipFrameTemplate.xml"/>
+	<Include file="ChorusProgressFrameTemplate.xml"/>
+	<Include file="ChorusHealthFrameTemplate.xml"/>
+	<Include file="ChorusPowerFrameTemplate.xml"/>
+	<Include file="ChorusCastFrameTemplate.xml"/>
+	<Include file="ChorusUnitNameFrameTemplate.xml"/>
+	<Include file="ChorusRangeFrameTemplate.xml"/>
+	<Include file="ChorusThreatFrameTemplate.xml"/>
+	<Include file="ChorusRaidTargetIconFrameTemplate.xml"/>
+	<Include file="ChorusUnitLevelFrameTemplate.xml"/>
+	<Include file="ChorusUnitAffectingCombatFrameTemplate.xml"/>
+	<Include file="ChorusUnitGroupRoleFrameTemplate.xml"/>
+	<Include file="ChorusUnitButtonTemplate.xml"/>
+	<Include file="ChorusUnitFrameTemplate.xml"/>
+	<Include file="ChorusUnitBackgroundTemplate.xml"/>
+	<Include file="ChorusUnitBackdropTemplate.xml"/>
+	<Include file="ChorusHugeUnitFrameTemplate.xml"/>
+	<Include file="ChorusLargeUnitFrameTemplate.xml"/>
+	<Include file="ChorusSmallUnitFrameTemplate.xml"/>
+	<Include file="ChorusTinyUnitFrameTemplate.xml"/>
+	<!-- `ChorusRaidFrameTemplate.xml` MUST be loaded AFTER all unit templates. -->
+	<Include file="ChorusRaidFrameTemplate.xml"/>
+	<!-- Frames (concrete classes, interface implementations, object instances). -->
+	<Include file="ChorusPartyFrame.xml"/>
+	<Include file="ChorusTinyRaidFrame.xml"/>
+	<Include file="ChorusSmallRaidFrame.xml"/>
+	<Include file="ChorusLargeRaidFrame.xml"/>
+	<Include file="ChorusPlayerFrame.xml"/>
+	<Include file="ChorusTargetFrame.xml"/>
+	<Include file="ChorusFocusFrame.xml"/>
+	<!-- `ChorusGroupFrame.xml` MUST be loaded AFTER all raid, party and solo frames.
+	Otherwise, critical runtime failure will occurr. -->
+	<Include file="ChorusGroupFrame.xml"/>
+	<Include file="ChorusFrame.xml"/>
+</Ui>

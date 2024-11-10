@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusUnitFrameTemplate.lua"/>
+	<Frame name="ChorusUnitFrameTemplate" virtual="true" protected="false" frameStrata="LOW">
+		<Frames>
+			<Frame name="$parentSecureHandlerAttributeFrame" inherits="SecureHandlerAttributeTemplate"/>
+		</Frames>
+		<Attributes>
+			<Attribute name="unit" type="string" value="none"/>
+		</Attributes>
+		<Scripts>
+			<OnLoad>Chorus.unitFrameMain(self);</OnLoad>
+		</Scripts>
+	</Frame>
+	<!-- Raid or party members are rendered transparent when out of range. Only works for actual group members. -->
+	<Frame name="ChorusMemberUnitFrameTemplate" inherits="ChorusUnitFrameTemplate" virtual="true" protected="false">
+		<Scripts>
+			<OnUpdate>Chorus.unitFrameUnitInRangeUpdateProcessor(self);</OnUpdate>
+			<OnLoad>Chorus.unitMemberFrameMain(self);</OnLoad>
+		</Scripts>
+	</Frame>
+	<!-- Target-of-target (TOT) unit frame is updated multiple times a second. Use sparingly. -->
+	<Frame name="ChorusTOTUnitFrameTemplate" inherits="ChorusUnitFrameTemplate" virtual="true" protected="false">
+		<Scripts>
+			<OnUpdate>Chorus.unitFrameTOTUpdateProcessor(self);</OnUpdate>
+		</Scripts>
+	</Frame>
+</Ui>

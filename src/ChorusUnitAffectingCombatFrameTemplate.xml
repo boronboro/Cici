@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusUnitAffectingCombatFrameTemplate.lua"/>
+	<Frame name="ChorusUnitAffectingCombatFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="24" y="24" />
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentArtwork" file="Interface\CharacterFrame\UI-StateIcon" setAllPoints="true">
+					<TexCoords left="0.5" right="1.0" top="0" bottom="0.49"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				Chorus.unitAffectingCombatFrameMain(self);
+			</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+	</Frame>
+</Ui>

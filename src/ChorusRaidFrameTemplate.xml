@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Frame name="ChorusTinyRaidUnitFrameTemplate"
+	inherits="ChorusTinyUnitFrameTemplate,ChorusMemberUnitFrameTemplate"
+	virtual="true"/>
+	<Frame name="ChorusSmallRaidUnitFrameTemplate"
+	inherits="ChorusSmallUnitFrameTemplate,ChorusMemberUnitFrameTemplate"
+	virtual="true"/>
+	<Frame name="ChorusLargeRaidUnitFrameTemplate"
+	inherits="ChorusLargeUnitFrameTemplate,ChorusMemberUnitFrameTemplate"
+	virtual="true"/>
+	<Frame name="ChorusHugeRaidUnitFrameTemplate"
+	inherits="ChorusHugeUnitFrameTemplate,ChorusMemberUnitFrameTemplate"
+	virtual="true"/>
+</Ui>

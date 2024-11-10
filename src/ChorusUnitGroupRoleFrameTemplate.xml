@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusUnitGroupRoleFrameTemplate.lua"/>
+	<Frame name="ChorusUnitGroupRoleFrameTemplate" virtual="true" hidden="true">
+		<Size>
+			<AbsDimension x="16" y="16" />
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentArtwork" file="Interface\LFGFrame\UI-LFG-ICON-PORTRAITROLES" setAllPoints="true"/>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>Chorus.unitGroupRoleFrameMain(self);</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+	</Frame>
+	<Frame name="ChorusUnitGroupRoleMapFrame" virtual="false" hidden="true">
+		<Scripts>
+			<OnLoad>Chorus.unitGroupRoleMapFrameMain(self);</OnLoad>
+		</Scripts>
+	</Frame>
+</Ui>

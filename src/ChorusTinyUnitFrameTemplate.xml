@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Frame name="ChorusTinyUnitFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="64" y="16"/>
+		</Size>
+		<Frames>
+			<!-- Backdrop. -->
+			<Frame name="$parentBackdrop" inherits="ChorusUnitBackdropTemplate"/>
+			<!-- Clickable area. -->
+			<Button name="$parentSecureUnitButton" inherits="ChorusUnitButtonTemplate" setAllPoints="true"/>
+			<!-- Header -->
+			<Frame name="$parentUnitNameFrame" inherits="ChorusUnitNameFrameTemplate" setAllPoints="true"/>
+			<Frame name="$parentRaidTargetIconFrame" inherits="ChorusRaidTargetIconFrameTemplate">
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset x="0" y="4"/>
+					</Anchor>
+					<Anchor point="CENTER">
+						<Offset x="0" y="4"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<!-- Main -->
+			<StatusBar name="$parentHealthFrame" inherits="ChorusTinyHealthFrameTemplate" setAllPoints="true"/>
+		</Frames>
+	</Frame>
+</Ui>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Include file="ChorusProgressFrameTemplate.xml"/>
+	<StatusBar name="ChorusHealthFrameTemplate" inherits="ChorusProgressFrameTemplate" virtual="true">
+		<Scripts>
+			<OnLoad>Chorus.healthFrameMain(self);</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+	</StatusBar>
+	<!-- Huge health bar shows percentage, current amount and current deficit in the middle of the frame. -->
+	<StatusBar name="ChorusHugeHealthFrameTemplate" inherits="ChorusHealthFrameTemplate" virtual="true">
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText1" inherits="ChorusFont12Mono" justifyH="LEFT" justifyV="MIDDLE" setAllPoints="true"/>
+				<FontString name="$parentText2" inherits="ChorusFont12Mono" justifyH="CENTER" justifyV="MIDDLE" setAllPoints="true"/>
+				<FontString name="$parentText3" inherits="ChorusFont12Mono" justifyH="RIGHT" justifyV="MIDDLE" setAllPoints="true">
+					<Color r="1" g="0" b="0"/>
+				</FontString>
+			</Layer>
+		</Layers>
+	</StatusBar>
+	<!-- Large health bar shows percentage and current amount in the middle of the frame. -->
+	<StatusBar name="ChorusLargeHealthFrameTemplate" inherits="ChorusHealthFrameTemplate" virtual="true">
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText1" inherits="ChorusFont12Mono" justifyH="LEFT" justifyV="MIDDLE" setAllPoints="true"/>
+				<FontString name="$parentText2" inherits="ChorusFont12Mono" justifyH="RIGHT" justifyV="MIDDLE" setAllPoints="true"/>
+			</Layer>
+		</Layers>
+	</StatusBar>
+	<!-- Small health bar shows percentage at the bottom of the frame. -->
+	<StatusBar name="ChorusSmallHealthFrameTemplate" inherits="ChorusHealthFrameTemplate" virtual="true">
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText1" inherits="ChorusFont12Mono" justifyH="LEFT" justifyV="BOTTOM" setAllPoints="true"/>
+			</Layer>
+		</Layers>
+	</StatusBar>
+	<!-- Tiny health bar shows no amounts. -->
+	<StatusBar name="ChorusTinyHealthFrameTemplate" inherits="ChorusHealthFrameTemplate" virtual="true">
+	</StatusBar>
+</Ui>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+<Script file="ChorusAuraButtonTemplate.lua"/>
+	<Frame name="ChorusAuraButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="30" y="30" />
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture file="Interface\Icons\INV_Misc_QuestionMark" name="$parentArtwork" nonBlocking="true">
+					<Size>
+						<AbsDimension x="20" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="5" y="-2"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.16" right="0.84" top="0.12" bottom="0.88"/>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<Texture name="$parentOverlay" file="Interface\Buttons\UI-Debuff-Overlays" nonBlocking="true">
+					<Size>
+						<AbsDimension x="24" y="24"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="3" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.296875" right="0.5703125" top="0" bottom="0.515625"/>
+				</Texture>	
+				<FontString name="$parentText1" inherits="ChorusFont12Mono" setAllPoints="true" justifyV="BOTTOM" justifyH="CENTER">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="0" y="24"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentText2" inherits="ChorusFont12Mono" setAllPoints="true" justifyV="TOP" justifyH="RIGHT">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="0" y="-24"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>Chorus.auraButtonMain(self);</OnLoad>
+			<OnEnter>Chorus.auraButtonGameTooltipShow(self);</OnEnter>
+			<OnLeave>Chorus.auraButtonGameTooltipHide(self);</OnLeave>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+			<Attribute name="useparent-filter" type="boolean" value="true"/>
+		</Attributes>
+	</Frame>
+</Ui>

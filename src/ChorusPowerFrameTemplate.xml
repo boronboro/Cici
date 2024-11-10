@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Include file="ChorusProgressFrameTemplate.xml"/>
+	<StatusBar name="ChorusPowerFrameTemplate" inherits="ChorusProgressFrameTemplate" virtual="true">
+		<Scripts>
+			<OnLoad>Chorus.powerFrameMain(self);</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+	</StatusBar>
+	<StatusBar name="ChorusHugePowerFrameTemplate" inherits="ChorusPowerFrameTemplate" virtual="true">
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText1" inherits="ChorusFont12Mono" justifyH="LEFT" justifyV="MIDDLE" setAllPoints="true"/>
+				<FontString name="$parentText2" inherits="ChorusFont12Mono" justifyH="RIGHT" justifyV="MIDDLE" setAllPoints="true"/>
+			</Layer>
+		</Layers>
+	</StatusBar>
+	<StatusBar name="ChorusLargePowerFrameTemplate" inherits="ChorusHugePowerFrameTemplate" virtual="true"/>
+	<StatusBar name="ChorusSmallPowerFrameTemplate" inherits="ChorusPowerFrameTemplate" virtual="true">
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText1" inherits="ChorusFont12Mono" justifyH="LEFT" justifyV="BOTTOM" setAllPoints="true"/>
+			</Layer>
+		</Layers>
+	</StatusBar>
+	<StatusBar name="ChorusTinyPowerFrameTemplate" inherits="ChorusPowerFrameTemplate" virtual="true">
+	</StatusBar>
+</Ui>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusCastFrameTemplate.lua"/>
+	<Frame name="ChorusCastFrameTemplate" virtual="true" hidden="true">
+		<Frames>
+			<StatusBar name="$parentStatusBar" setAllPoints="true" frameStrata="LOW">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="24" y="4"/>
+					</Anchor>
+					<Anchor point="TOPRIGHT">
+						<Offset x="-4" y="-4"/>
+					</Anchor>
+				</Anchors>
+				<BarTexture name="$parentArtwork" file="Interface\TargetingFrame\UI-StatusBar" setAllPoints="true"/>
+				<BarColor r="1" g="0" b="1" a="1"/>
+			</StatusBar>
+			<Frame name="$parentBackdrop" inherits="ChorusUnitBackdropTemplate" frameStrata="BACKGROUND">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="20" y="0"/>
+					</Anchor>
+					<Anchor point="TOPRIGHT">
+						<Offset x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+			</Frame>
+		</Frames>
+		<Layers>
+			<Layer level="OVERLAY">
+				<Texture file="Interface\Icons\INV_Misc_QuestionMark" name="$parentArtwork1" nonBlocking="true">
+					<Size>
+						<AbsDimension x="16" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="CENTER">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.16" right="0.84" top="0.12" bottom="0.88"/>
+				</Texture>
+				<FontString name="$parentText1" inherits="ChorusFontBold13" justifyH="LEFT" justifyV="MIDDLE">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT">
+							<Offset x="24" y="0"/>
+						</Anchor>
+						<Anchor point="TOPRIGHT">
+							<Offset x="-24" y="0"/>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentText2" inherits="ChorusFont12Mono" justifyH="RIGHT" justifyV="MIDDLE">
+					<Anchors>
+						<Anchor point="TOPRIGHT">
+							<Offset x="0" y="0"/>
+						</Anchor>
+						<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPRIGHT">
+							<Offset x="-36" y="0"/>
+						</Anchor>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMRIGHT">
+							<Offset x="-36" y="0"/>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>Chorus.castFrameMain(self);</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+	</Frame>
+</Ui>

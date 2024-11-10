@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusUnitBackgroundTemplate.lua"/>
+	<Frame name="ChorusUnitBackgroundTemplate" virtual="true" protected="false" setAllPoints="true">
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentTexture1" setAllPoints="true">
+					<Color r="0" g="0" b="0" a="0.34"/>
+				</Texture>
+				<Texture name="$parentTexture2" setAllPoints="true" hidden="true">
+					<Color r="0.7" g="0.14" b="0.14" a="0.34"/>
+				</Texture>
+				<Texture name="$parentTexture3" setAllPoints="true" hidden="true">
+					<Color r="1" g="0.84" b="0" a="0.34"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+		<Scripts>
+			<OnLoad>Chorus.unitBackgroundMain(self);</OnLoad>
+		</Scripts>
+	</Frame>
+</Ui>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusUnitButtonTemplate.lua"/>
+	<Button name="ChorusUnitButtonTemplate" toplevel="true" inherits="SecureUnitButtonTemplate" virtual="true" enableMouse="true" frameStrata="LOW">
+		<Frames>
+			<Frame name="$parentSecureHandlerAttributeFrame" inherits="SecureHandlerAttributeTemplate"/>
+		</Frames>
+		<Scripts>
+			<OnLoad>Chorus.unitButtonMain(self);</OnLoad>
+		</Scripts>
+		<Attributes>
+			<!-- When the button is clicked with left mouse button,
+			     given no modifier keys are held,
+			     target game unit that corresponds to the button. -->
+			<Attribute name="type1" type="string" value="target"/>
+			<!-- Fallback to parent's unit property if necessary. -->
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+			<Attribute name="type2" type="string" value="menu"/>
+		</Attributes>
+	</Button>
+</Ui>

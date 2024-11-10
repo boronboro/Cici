@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Frame name="ChorusTargetFrame" inherits="ChorusHugeUnitFrameTemplate">
+		<Anchors>
+			<Anchor point="TOP">
+				<Offset x="-576" y="-300"/>
+			</Anchor>
+			<Anchor point="CENTER">
+				<Offset x="0" y="0"/>
+			</Anchor>
+		</Anchors>
+		<Attributes>
+			<!-- TODO Add back target context menu popup on right click. -->
+			<Attribute name="unit" type="string" value="target"/>
+		</Attributes>
+	</Frame>
+	<Frame name="ChorusTargetTargetButton" inherits="ChorusSmallUnitFrameTemplate,ChorusTOTUnitFrameTemplate">
+		<Anchors>
+			<Anchor point="BOTTOMLEFT" relativeTo="ChorusTargetFrame" relativePoint="TOPLEFT">
+				<Offset x="50" y="6"/>
+			</Anchor>
+		</Anchors>
+		<Attributes>
+			<Attribute name="unit" type="string" value="targettarget"/>
+		</Attributes>
+	</Frame>
+</Ui>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusGroupFrame.lua"/>
+	<Frame name="ChorusGroupFrame" hidden="true">
+		<Size>
+			<AbsDimension x="800" y="600"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset>
+					<AbsDimension x="0" y="0"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Scripts>
+			<OnLoad>Chorus.groupFrameMain(self);</OnLoad>
+		</Scripts>
+		<Frames>
+			<Frame name="ChorusGroupSecureHandler" inherits="SecureHandlerStateTemplate"/>
+		</Frames>
+	</Frame>
+</Ui>

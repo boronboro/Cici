@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Font name="ChorusFont12Mono" inherits="NumberFontNormalSmall"/>
+	<Font name="ChorusFont12Sans" inherits="GameFontNormal"/>
+	<Font name="ChorusFontBold13" font="Fonts\FRIZQT__.TTF" outline="NORMAL">
+		<Shadow>
+			<Offset>
+				<AbsDimension x="2" y="-2"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="13"/>
+		</FontHeight>
+	</Font>
+</Ui>

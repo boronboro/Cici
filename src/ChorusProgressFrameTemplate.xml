@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusProgressFrameTemplate.lua"/>
+	<StatusBar name="ChorusProgressFrameTemplate" minValue="0" maxValue="1" defaultValue="1" virtual="true">
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentBackground" nonBlocking="true" setAllPoints="true">
+					<Color r="0" g="0" b="0" a="0.4"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<BarTexture name="$parentArtwork" file="Interface\TargetingFrame\UI-StatusBar"/>
+		<BarColor r="1" g="0" b="1" a="1"/>
+	</StatusBar>
+</Ui>

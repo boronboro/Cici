@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Frame name="ChorusPlayerFrame" inherits="ChorusHugeUnitFrameTemplate">
+		<Anchors>
+			<Anchor point="TOP">
+				<Offset x="-576" y="-100"/>
+			</Anchor>
+			<Anchor point="CENTER">
+				<Offset x="0" y="0"/>
+			</Anchor>
+		</Anchors>
+		<Attributes>
+			<Attribute name="unit" type="string" value="player"/>
+		</Attributes>
+	</Frame>
+	<Frame name="ChorusPlayerPetButton" inherits="ChorusSmallUnitFrameTemplate">
+		<Anchors>
+			<Anchor point="BOTTOMLEFT" relativeTo="ChorusPlayerFrame" relativePoint="TOPLEFT">
+				<Offset x="50" y="6"/>
+			</Anchor>
+		</Anchors>
+		<Attributes>
+			<Attribute name="unit" type="string" value="pet"/>
+		</Attributes>
+	</Frame>
+</Ui>

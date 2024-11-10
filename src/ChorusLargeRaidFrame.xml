@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was generated automatically. Never edit it manually.
+Instead, see `bin/ChorusRaidFrameGenerator.lua`. -->
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<!-- See `ChorusRaidFrameTemplate.xml` for the unit button template declarations. -->
+	<Frame name="ChorusLargeRaidFrame" hidden="true" inherits="SecureFrameTemplate" protected="true">
+		<Size>
+			<AbsDimension x="846" y="848"/>
+		</Size>
+		<Anchors>
+			<Anchor point="BOTTOM">
+				<Offset x="0" y="200"/>
+			</Anchor>
+			<Anchor point="CENTER">
+				<Offset x="0" y="0"/>
+			</Anchor>
+		</Anchors>
+		<Frames>
+			<!-- Block 1. -->
+			<!-- Group 1. -->
+			<Frame name="ChorusLargeRaidFrameGroupLabel1" hidden="true">
+				<Size>
+					<AbsDimension x="16" y="100"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="-16" y="0"/>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="ChorusFontBold13" setAllPoints="true" justifyH="CENTER" justifyV="MIDDLE" text="1"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton01" inherits="ChorusLargeRaidUnitFrameTemplate" id="1">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid1"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton02" inherits="ChorusLargeRaidUnitFrameTemplate" id="2">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="166" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid2"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton03" inherits="ChorusLargeRaidUnitFrameTemplate" id="3">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="332" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid3"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton04" inherits="ChorusLargeRaidUnitFrameTemplate" id="4">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="498" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid4"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton05" inherits="ChorusLargeRaidUnitFrameTemplate" id="5">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="664" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid5"/>
+				</Attributes>
+			</Frame>
+			<!-- Group 2. -->
+			<Frame name="ChorusLargeRaidFrameGroupLabel2" hidden="true">
+				<Size>
+					<AbsDimension x="16" y="100"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="-16" y="106"/>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="ChorusFontBold13" setAllPoints="true" justifyH="CENTER" justifyV="MIDDLE" text="2"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton06" inherits="ChorusLargeRaidUnitFrameTemplate" id="6">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="106"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid6"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton07" inherits="ChorusLargeRaidUnitFrameTemplate" id="7">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="166" y="106"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid7"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton08" inherits="ChorusLargeRaidUnitFrameTemplate" id="8">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="332" y="106"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid8"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton09" inherits="ChorusLargeRaidUnitFrameTemplate" id="9">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="498" y="106"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid9"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton10" inherits="ChorusLargeRaidUnitFrameTemplate" id="10">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="664" y="106"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid10"/>
+				</Attributes>
+			</Frame>
+			<!-- Group 3. -->
+			<Frame name="ChorusLargeRaidFrameGroupLabel3" hidden="true">
+				<Size>
+					<AbsDimension x="16" y="100"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="-16" y="212"/>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="ChorusFontBold13" setAllPoints="true" justifyH="CENTER" justifyV="MIDDLE" text="3"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton11" inherits="ChorusLargeRaidUnitFrameTemplate" id="11">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="212"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid11"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton12" inherits="ChorusLargeRaidUnitFrameTemplate" id="12">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="166" y="212"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid12"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton13" inherits="ChorusLargeRaidUnitFrameTemplate" id="13">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="332" y="212"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid13"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton14" inherits="ChorusLargeRaidUnitFrameTemplate" id="14">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="498" y="212"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid14"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton15" inherits="ChorusLargeRaidUnitFrameTemplate" id="15">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="664" y="212"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid15"/>
+				</Attributes>
+			</Frame>
+			<!-- Group 4. -->
+			<Frame name="ChorusLargeRaidFrameGroupLabel4" hidden="true">
+				<Size>
+					<AbsDimension x="16" y="100"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="-16" y="318"/>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="ChorusFontBold13" setAllPoints="true" justifyH="CENTER" justifyV="MIDDLE" text="4"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton16" inherits="ChorusLargeRaidUnitFrameTemplate" id="16">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="318"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid16"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton17" inherits="ChorusLargeRaidUnitFrameTemplate" id="17">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="166" y="318"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid17"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton18" inherits="ChorusLargeRaidUnitFrameTemplate" id="18">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="332" y="318"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid18"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton19" inherits="ChorusLargeRaidUnitFrameTemplate" id="19">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="498" y="318"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid19"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton20" inherits="ChorusLargeRaidUnitFrameTemplate" id="20">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="664" y="318"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid20"/>
+				</Attributes>
+			</Frame>
+			<!-- Group 5. -->
+			<Frame name="ChorusLargeRaidFrameGroupLabel5" hidden="true">
+				<Size>
+					<AbsDimension x="16" y="100"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="-16" y="424"/>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="ChorusFontBold13" setAllPoints="true" justifyH="CENTER" justifyV="MIDDLE" text="5"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton21" inherits="ChorusLargeRaidUnitFrameTemplate" id="21">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="424"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid21"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton22" inherits="ChorusLargeRaidUnitFrameTemplate" id="22">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="166" y="424"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid22"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton23" inherits="ChorusLargeRaidUnitFrameTemplate" id="23">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="332" y="424"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid23"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton24" inherits="ChorusLargeRaidUnitFrameTemplate" id="24">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="498" y="424"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid24"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton25" inherits="ChorusLargeRaidUnitFrameTemplate" id="25">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="664" y="424"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid25"/>
+				</Attributes>
+			</Frame>
+			<!-- Group 6. -->
+			<Frame name="ChorusLargeRaidFrameGroupLabel6" hidden="true">
+				<Size>
+					<AbsDimension x="16" y="100"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="-16" y="530"/>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="ChorusFontBold13" setAllPoints="true" justifyH="CENTER" justifyV="MIDDLE" text="6"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton26" inherits="ChorusLargeRaidUnitFrameTemplate" id="26">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="530"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid26"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton27" inherits="ChorusLargeRaidUnitFrameTemplate" id="27">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="166" y="530"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid27"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton28" inherits="ChorusLargeRaidUnitFrameTemplate" id="28">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="332" y="530"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid28"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton29" inherits="ChorusLargeRaidUnitFrameTemplate" id="29">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="498" y="530"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid29"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton30" inherits="ChorusLargeRaidUnitFrameTemplate" id="30">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="664" y="530"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid30"/>
+				</Attributes>
+			</Frame>
+			<!-- Group 7. -->
+			<Frame name="ChorusLargeRaidFrameGroupLabel7" hidden="true">
+				<Size>
+					<AbsDimension x="16" y="100"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="-16" y="636"/>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="ChorusFontBold13" setAllPoints="true" justifyH="CENTER" justifyV="MIDDLE" text="7"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton31" inherits="ChorusLargeRaidUnitFrameTemplate" id="31">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="636"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid31"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton32" inherits="ChorusLargeRaidUnitFrameTemplate" id="32">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="166" y="636"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid32"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton33" inherits="ChorusLargeRaidUnitFrameTemplate" id="33">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="332" y="636"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid33"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton34" inherits="ChorusLargeRaidUnitFrameTemplate" id="34">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="498" y="636"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid34"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton35" inherits="ChorusLargeRaidUnitFrameTemplate" id="35">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="664" y="636"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid35"/>
+				</Attributes>
+			</Frame>
+			<!-- Group 8. -->
+			<Frame name="ChorusLargeRaidFrameGroupLabel8" hidden="true">
+				<Size>
+					<AbsDimension x="16" y="100"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="-16" y="742"/>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="ChorusFontBold13" setAllPoints="true" justifyH="CENTER" justifyV="MIDDLE" text="8"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton36" inherits="ChorusLargeRaidUnitFrameTemplate" id="36">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="742"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid36"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton37" inherits="ChorusLargeRaidUnitFrameTemplate" id="37">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="166" y="742"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid37"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton38" inherits="ChorusLargeRaidUnitFrameTemplate" id="38">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="332" y="742"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid38"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton39" inherits="ChorusLargeRaidUnitFrameTemplate" id="39">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="498" y="742"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid39"/>
+				</Attributes>
+			</Frame>
+			<Frame name="ChorusLargeRaidFrameButton40" inherits="ChorusLargeRaidUnitFrameTemplate" id="40">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="664" y="742"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Attributes>
+					<Attribute name="unit" type="string" value="raid40"/>
+				</Attributes>
+			</Frame>
+		</Frames>
+	</Frame>
+</Ui>

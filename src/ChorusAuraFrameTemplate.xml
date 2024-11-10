@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="ChorusAuraFrameTemplate.lua"/>
+	<Frame name="ChorusAuraFrameTemplate" virtual="true">
+		<!-- All descendants must allocate the aura buttons themselves. -->
+		<Scripts>
+			<OnLoad>Chorus.auraFrameMain(self);</OnLoad>
+		</Scripts>
+		<Attributes>
+			<Attribute name="useparent-unit" type="boolean" value="true"/>
+		</Attributes>
+	</Frame>
+	<Frame name="ChorusLargeAuraFrameTemplate" inherits="ChorusAuraFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="240" y="30"/>
+		</Size>
+		<Frames>
+			<Frame name="$parentAuraButton1" inherits="ChorusAuraButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentAuraButton2" inherits="ChorusAuraButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parentAuraButton1" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentAuraButton3" inherits="ChorusAuraButtonTemplate" id="3">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parentAuraButton2" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentAuraButton4" inherits="ChorusAuraButtonTemplate" id="4">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parentAuraButton3" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentAuraButton5" inherits="ChorusAuraButtonTemplate" id="5">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parentAuraButton4" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentAuraButton6" inherits="ChorusAuraButtonTemplate" id="6">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parentAuraButton5" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+		</Frames>
+	</Frame>
+	<Frame name="ChorusSmallAuraFrameTemplate" inherits="ChorusAuraFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="120" y="30"/>
+		</Size>
+		<Frames>
+			<Frame name="$parentAuraButton1" inherits="ChorusAuraButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentAuraButton2" inherits="ChorusAuraButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parentAuraButton1" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentAuraButton3" inherits="ChorusAuraButtonTemplate" id="3">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parentAuraButton2" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentAuraButton4" inherits="ChorusAuraButtonTemplate" id="4">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parentAuraButton3" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+		</Frames>
+	</Frame>
+	<Frame name="ChorusTinyAuraFrameTemplate" inherits="ChorusAuraFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="30" y="30"/>
+		</Size>
+		<Frames>
+			<Frame name="$parentAuraButton1" inherits="ChorusAuraButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+		</Frames>
+	</Frame>
+</Ui>
